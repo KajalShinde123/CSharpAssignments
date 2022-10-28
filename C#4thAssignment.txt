@@ -1,3 +1,6 @@
+using System;
+namespace ass3{
+
 public class StackExeption {
 
     private int maxStackSize, topOfStack;
@@ -5,7 +8,7 @@ public class StackExeption {
 
     public StackExeption(int maxStackSize) {
         if (maxStackSize <= 0)
-            System.out.println("Stack size should be a positive integer.");
+            Console.WriteLine("Stack size should be a positive integer.");
         else {
             this.maxStackSize = maxStackSize;
             topOfStack = -1;
@@ -15,7 +18,7 @@ public class StackExeption {
 
     public void push(int val) { 
         if(topOfStack == maxStackSize - 1)
-            System.out.println("Cannot push! Stack is full.");
+            Console.WriteLine("Cannot push! Stack is full.");
         else
             stack[++topOfStack] = val;
     }
