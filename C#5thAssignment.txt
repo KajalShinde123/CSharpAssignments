@@ -76,7 +76,7 @@ class A {
 Que:2
 
 using System;
-using System.Generic;
+using System.Collections.Generic;
 namespace Second{
 class Employee{
 ArrayList arlist = new ArrayList()
