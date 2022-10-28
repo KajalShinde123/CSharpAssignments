@@ -1,0 +1,257 @@
+﻿using System;
+
+namespace Assignment1_1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter which action do you want to perform ");
+            Console.WriteLine("1 for Addition");
+            Console.WriteLine("2 for Subtraction");
+            Console.WriteLine("3 for Multiplication");
+            Console.WriteLine("4 for Division \n");
+            int action = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter 1st input");
+            int input_1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter 2nd input");
+            int input_2 = Convert.ToInt32(Console.ReadLine());
+            int result = 0;
+            switch (action)
+            {
+                case 1:
+                    {
+                        result = Addition(input_1, input_2);
+                        break;
+                    }
+                case 2:
+                    {
+                        result = Subtraction(input_1, input_2);
+                        break;
+                    }
+                case 3:
+                    {
+                        result = Multiplication(input_1, input_2);
+                        break;
+                    }
+                case 4:
+                    {
+                        result = Division(input_1, input_2);
+                        break;
+                    }
+                default:
+                    Console.WriteLine("Wrong action!! try again");
+                    break;
+            }
+            Console.WriteLine("The result is {0}", result);
+            Console.ReadKey();
+        }
+        //Addition  
+        public static int Addition(int input_1, int input_2)
+        {
+            int result = input_1 + input_2;
+            return result;
+        }
+        //Substraction  
+        public static int Subtraction(int input_1, int input_2)
+        {
+            int result = input_1 + input_2;
+            return result;
+        }
+        //Multiplication  
+        public static int Multiplication(int input_1, int input_2)
+        {
+            int result = input_1 + input_2;
+            return result;
+        }
+        //Division  
+        public static int Division(int input_1, int input_2)
+        {
+            int result = input_1 + input_2;
+            return result;
+        }
+    }
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+Que:2
+
+using System;
+
+namespace Assignment1_2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int rollnum;
+            int marks1, marks2, marks3, marks4, marks5;
+
+            Console.WriteLine("Enter 1 st Student Roll Number :");
+            rollnum = Convert.ToInt32(Console.ReadLine());
+           
+            //for accepting marks
+            Console.WriteLine("Enter 1 st student Marks : ");
+            marks1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter 2 nd student Marks : ");
+            marks2 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter 3 rd student Marks : ");
+            marks3 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter 4 th student Marks : ");
+            marks4 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter 5 th student Marks : ");
+            marks5 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Maximum marks are:"+Math.Max(marks1,marks2,marks3,marks4,marks5));
+            Console.ReadKey();
+        }
+    }
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Que:3
+
+using System;
+
+namespace Assignmentno3
+{
+    class Program
+    {
+        public static int Addo(params int[] names)
+        {
+            int sum = 0;
+            foreach (int name in names)
+            {
+                Console.WriteLine("Your Values " + name);
+            }
+           
+            for (int i = 0; i < names.Length; i++)
+            {
+                sum += names[i];
+            }
+
+
+
+
+            return sum;
+
+        }
+       
+
+        public static void Main(String[] args)
+        
+        {
+            Addo(1, 2, 3, 4);
+            Console.ReadLine();
+        }
+        
+  }
+}
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Que:4
+
+using System;
+
+namespace Assignment1_4
+{
+    public class SwapExample
+    {
+        public static void Main(string[] args)
+        {
+            int a = 5, b = 10;
+            Console.WriteLine("Before swap a= " + a + " b= " + b);
+            a = a * b; //a=50 (5*10)      
+            b = a / b; //b=5 (50/10)      
+            a = a / b; //a=10 (50/5)    
+            Console.Write("After swap a= " + a + " b= " + b);
+            Console.ReadKey();
+        }
+    }
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+Que:5
+
+using System;
+
+namespace Assignment5
+{
+
+    public class Exercise5
+    {
+        public static void Main()
+        {
+
+            double r, circumference,Area;
+            double PI = 3.14;
+            Console.WriteLine("Input the radius of the circle : ");
+            r = Convert.ToDouble(Console.ReadLine());
+            circumference = 2 * PI * r;
+            Console.WriteLine("Circumference of Circle : {0}", circumference);
+            //for area of circle
+            Area = (PI * r * r);
+            Console.WriteLine("Area of Circle :{0}",Area);
+
+
+            Console.ReadLine();
+        }
+    }
+}
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+Que:6
+
+using System;
+namespace Assignment6
+{ 
+struct BOOKS
+{
+	public int book_id;
+	public string Title;
+	public int price;
+
+		enum bookType
+        {
+			Magazine,
+			Novel,
+			ReferenceBook,
+			Miscellaneous
+        }
+};
+public class StructureClass
+{
+	public static void Main(string[] args)
+	{
+            Console.WriteLine("Enter Details of book1");
+            Console.WriteLine("Enter book id");
+			int book_id = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter Title of the book1");
+			string Title = Console.ReadLine();
+            Console.WriteLine("Enter price of book 1");
+			int price = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Select type of book");
+			string bookType = Convert.ToString(Console.ReadLine());
+
+
+            Console.WriteLine(" ");
+            Console.WriteLine("Your Entered BOOk Details Are...");
+			Console.WriteLine("Book 1\n Id  = {0}", book_id);
+			Console.WriteLine("Title = {0}", Title);
+			Console.WriteLine("price = {0}", price);
+			Console.WriteLine("bookType = {0}", bookType);
+		
+
+
+			Console.ReadLine();
+
+	}
+}
+}
